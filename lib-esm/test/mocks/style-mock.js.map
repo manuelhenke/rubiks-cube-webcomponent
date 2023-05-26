@@ -1,0 +1,1 @@
+{"version":3,"file":"style-mock.js","sourceRoot":"","sources":["../../../test/mocks/style-mock.ts"],"names":[],"mappings":"AAAA,eAAe,EAAE,CAAC","sourcesContent":["export default '';\n"]}

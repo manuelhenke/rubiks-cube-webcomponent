@@ -1,0 +1,1 @@
+{"version":3,"file":"RubiksCube.js","sourceRoot":"","sources":["../../../src/engine/RubiksCube.ts"],"names":[],"mappings":";;;AAAA,MAAa,UAAU;IACrB,gBAAe,CAAC;CACjB;AAFD,gCAEC","sourcesContent":["export class RubiksCube {\n  constructor() {}\n}\n"]}

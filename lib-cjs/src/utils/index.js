@@ -1,0 +1,29 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.deepCopy = void 0;
+function deepCopy(object) {
+    if (Array.isArray(object)) {
+        // @ts-expect-error: Unsafe type
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-return
+        return object.map((item) => deepCopy(item));
+    }
+    if (object instanceof Date) {
+        // @ts-expect-error: Unsafe type
+        return new Date(object.getTime());
+    }
+    if (object && typeof object === 'object') {
+        const getters = Object.entries(Object.getOwnPropertyDescriptors(Object.getPrototypeOf(object)))
+            .filter(([key, descriptor]) => typeof descriptor.get === 'function' && key !== '__proto__')
+            .map(([key]) => key);
+        const copy = {};
+        for (const key of [...Object.keys(object), ...getters]) {
+            // @ts-expect-error: Unsafe type
+            copy[key] = deepCopy(object[key]);
+        }
+        // @ts-expect-error: Unsafe type
+        return copy;
+    }
+    return object;
+}
+exports.deepCopy = deepCopy;
+//# sourceMappingURL=index.js.map

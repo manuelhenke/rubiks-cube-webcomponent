@@ -1,0 +1,1 @@
+{"version":3,"file":"RubiksCubeEngine.d.ts","sourceRoot":"","sources":["../../../src/engine/RubiksCubeEngine.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,UAAU,EAAE,MAAM,cAAc,CAAC;AAE1C,qBAAa,gBAAgB;;IAG3B,UAAU,UAAQ;IAElB,aAAa,EAAE,MAAM,IAAI,CAAC;IAE1B,cAAc,EAAE,MAAM,IAAI,CAAC;gBAEf,aAAa,aAAW,EAAE,cAAc,aAAW;IAK/D,IAAI,IAAI,eAEP;IAED,UAAU;IAIV,OAAO;CAIR"}

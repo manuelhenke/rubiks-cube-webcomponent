@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        max-width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #fafafa;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>RubiksCube</h1>
+    <rubiks-cube-game id="rubiks-cube"></rubiks-cube-game>
+    <h2>Custom tag name</h2>
+    <custom-rubiks-cube-game></custom-rubiks-cube-game>
+
+    <script type="module">
+      import './dist/custom-element.js';
+      // Replace with: import 'rubiksCube-for-web';
+      // Alternative:
+      // import 'rubiks-cube-for-web/custom-element';
+      // import 'rubiks-cube-for-web/custom-element.min';
+
+      import { RubiksCubeGame } from './dist/rubiks-cube-game.js';
+      // Replace with: import { RubiksCubeGame } from 'rubiksCube-for-web/rubiks-cube-game';
+      // Alternative:
+      // import 'rubiks-cube-for-web/rubiks-cube-game.min';
+
+      window.customElements.define('custom-rubiks-cube-game', RubiksCubeGame);
+
+      function getGameModeConfiguration(currentGameMode) {
+        switch (currentGameMode) {
+          case 'hard':
+            return {
+              columns: 30,
+              rows: 16,
+              bombs: 99,
+            };
+          case 'normal':
+            return {
+              columns: 16,
+              rows: 16,
+              bombs: 40,
+            };
+          default: // 'easy'
+            return {
+              columns: 9,
+              rows: 9,
+              bombs: 10,
+            };
+        }
+      }
+
+      window.addEventListener('DOMContentLoaded', () => {
+        /** @type {RubiksCubeGame} **/
+        const rubiksCube = document.querySelector('#rubiks-cube');
+
+        rubiksCube.addEventListener('rubiks-cube:game-won', (event) => {
+          console.log('game-won', event);
+          // eslint-disable-next-line no-alert
+          window.alert('You won!');
+        });
+
+        rubiksCube.addEventListener('rubiks-cube:game-lost', (event) => {
+          console.log('game-lost', event);
+          // eslint-disable-next-line no-alert
+          window.alert('You lost!');
+        });
+      });
+    </script>
+  </body>
+</html>

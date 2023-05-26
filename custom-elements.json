@@ -1,0 +1,963 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/RubiksCubeGame.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "RubiksCubeGame",
+          "members": [
+            {
+              "kind": "field",
+              "name": "engine",
+              "type": {
+                "text": "RubiksCubeEngine"
+              },
+              "privacy": "private",
+              "default": "new RubiksCubeEngine(\n      this.gameWonCallback.bind(this),\n      this.gameLostCallback.bind(this)\n    )"
+            },
+            {
+              "kind": "method",
+              "name": "createCube",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "gameWonCallback",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "gameLostCallback",
+              "privacy": "private"
+            },
+            {
+              "kind": "method",
+              "name": "setGameModeConfiguration"
+            },
+            {
+              "kind": "method",
+              "name": "restartGame"
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "GameWonEvent"
+              }
+            },
+            {
+              "type": {
+                "text": "GameWonEvent"
+              },
+              "description": "User just won the game",
+              "name": "rubiksCube:game-won"
+            },
+            {
+              "type": {
+                "text": "GameLostEvent"
+              },
+              "description": "User just lost the game",
+              "name": "rubiksCube:game-lost"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "CUSTOM_ELEMENT_TAG",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "RubiksCubeGame",
+          "declaration": {
+            "name": "RubiksCubeGame",
+            "module": "src/RubiksCubeGame.ts"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "RubiksCubeGame",
+            "module": "src/RubiksCubeGame.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/custom-element.ts",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "CUSTOM_ELEMENT_TAG",
+          "type": {
+            "text": "string"
+          },
+          "default": "'rubiks-cube-game'"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "CUSTOM_ELEMENT_TAG",
+          "declaration": {
+            "name": "RubiksCubeGame",
+            "module": "/src/RubiksCubeGame"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "GameLostEvent",
+          "declaration": {
+            "name": "GameLostEvent",
+            "module": "./events"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "GameWonEvent",
+          "declaration": {
+            "name": "GameWonEvent",
+            "module": "./events"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "RubiksCubeEvent",
+          "declaration": {
+            "name": "RubiksCubeEvent",
+            "module": "./events"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "RubiksCube",
+          "declaration": {
+            "name": "RubiksCube",
+            "module": "./engine"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "RubiksCubeEngine",
+          "declaration": {
+            "name": "RubiksCubeEngine",
+            "module": "./engine"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "RubiksCubeGame",
+          "declaration": {
+            "name": "RubiksCubeGame",
+            "module": "./RubiksCubeGame"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-esm/src/RubiksCubeGame.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "RubiksCubeGame",
+          "members": [
+            {
+              "kind": "method",
+              "name": "createCube"
+            },
+            {
+              "kind": "method",
+              "name": "gameWonCallback"
+            },
+            {
+              "kind": "method",
+              "name": "gameLostCallback"
+            },
+            {
+              "kind": "method",
+              "name": "setGameModeConfiguration"
+            },
+            {
+              "kind": "method",
+              "name": "restartGame"
+            },
+            {
+              "kind": "field",
+              "name": "engine",
+              "default": "new RubiksCubeEngine(this.gameWonCallback.bind(this), this.gameLostCallback.bind(this))"
+            }
+          ],
+          "events": [
+            {
+              "type": {
+                "text": "GameWonEvent"
+              }
+            },
+            {
+              "type": {
+                "text": "GameWonEvent"
+              },
+              "description": "User just won the game",
+              "name": "rubiksCube:game-won"
+            },
+            {
+              "type": {
+                "text": "GameLostEvent"
+              },
+              "description": "User just lost the game",
+              "name": "rubiksCube:game-lost"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "CUSTOM_ELEMENT_TAG",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "RubiksCubeGame",
+          "declaration": {
+            "name": "RubiksCubeGame",
+            "module": "lib-esm/src/RubiksCubeGame.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "RubiksCubeGame",
+            "module": "lib-esm/src/RubiksCubeGame.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-esm/src/custom-element.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "CUSTOM_ELEMENT_TAG",
+          "type": {
+            "text": "string"
+          },
+          "default": "'rubiks-cube-game'"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "CUSTOM_ELEMENT_TAG",
+          "declaration": {
+            "name": "RubiksCubeGame",
+            "module": "/lib-esm/src/RubiksCubeGame.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-esm/src/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "GameLostEvent",
+          "declaration": {
+            "name": "GameLostEvent",
+            "module": "./events/index.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "GameWonEvent",
+          "declaration": {
+            "name": "GameWonEvent",
+            "module": "./events/index.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "RubiksCubeEvent",
+          "declaration": {
+            "name": "RubiksCubeEvent",
+            "module": "./events/index.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "RubiksCube",
+          "declaration": {
+            "name": "RubiksCube",
+            "module": "./engine/index.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "RubiksCubeEngine",
+          "declaration": {
+            "name": "RubiksCubeEngine",
+            "module": "./engine/index.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-cjs/src/RubiksCubeGame.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-cjs/src/custom-element.js",
+      "declarations": [
+        {
+          "kind": "variable",
+          "name": "CUSTOM_ELEMENT_TAG",
+          "type": {
+            "text": "string"
+          },
+          "default": "'rubiks-cube-game'"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "custom-element-definition",
+          "name": "CUSTOM_ELEMENT_TAG",
+          "declaration": {
+            "name": "RubiksCubeGame",
+            "module": "lib-cjs/src/custom-element.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-cjs/src/index.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/engine/RubiksCube.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "RubiksCube"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "RubiksCube",
+          "declaration": {
+            "name": "RubiksCube",
+            "module": "src/engine/RubiksCube.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/engine/RubiksCubeEngine.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "RubiksCubeEngine",
+          "members": [
+            {
+              "kind": "field",
+              "name": "#cube",
+              "privacy": "private",
+              "type": {
+                "text": "RubiksCube"
+              }
+            },
+            {
+              "kind": "field",
+              "name": "isGameOver",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true"
+            },
+            {
+              "kind": "field",
+              "name": "onWinCallback",
+              "type": {
+                "text": "() => void"
+              },
+              "default": "onWinCallback"
+            },
+            {
+              "kind": "field",
+              "name": "onLoseCallback",
+              "type": {
+                "text": "() => void"
+              },
+              "default": "onLoseCallback"
+            },
+            {
+              "kind": "field",
+              "name": "cube"
+            },
+            {
+              "kind": "method",
+              "name": "createCube"
+            },
+            {
+              "kind": "method",
+              "name": "restart"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "RubiksCubeEngine",
+          "declaration": {
+            "name": "RubiksCubeEngine",
+            "module": "src/engine/RubiksCubeEngine.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/engine/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./RubiksCube"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./RubiksCubeEngine"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/events/game-lost-event.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "GameLostEvent",
+          "superclass": {
+            "name": "RubiksCubeEvent",
+            "module": "/src/events/rubiks-cube-event"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "GameLostEvent",
+          "declaration": {
+            "name": "GameLostEvent",
+            "module": "src/events/game-lost-event.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/events/game-won-event.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "GameWonEvent",
+          "superclass": {
+            "name": "RubiksCubeEvent",
+            "module": "/src/events/rubiks-cube-event"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "GameWonEvent",
+          "declaration": {
+            "name": "GameWonEvent",
+            "module": "src/events/game-won-event.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/events/index.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "GameLostEvent",
+          "declaration": {
+            "name": "GameLostEvent",
+            "module": "./game-lost-event"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "GameWonEvent",
+          "declaration": {
+            "name": "GameWonEvent",
+            "module": "./game-won-event"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "RubiksCubeEvent",
+          "declaration": {
+            "name": "RubiksCubeEvent",
+            "module": "./rubiks-cube-event"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/events/rubiks-cube-event.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "RubiksCubeEvent",
+          "superclass": {
+            "name": "CustomEvent",
+            "module": "src/events/rubiks-cube-event.ts"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "RubiksCubeEvent",
+          "declaration": {
+            "name": "RubiksCubeEvent",
+            "module": "src/events/rubiks-cube-event.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/utils/index.ts",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "deepCopy",
+          "return": {
+            "type": {
+              "text": "T"
+            }
+          },
+          "parameters": [
+            {
+              "name": "object",
+              "type": {
+                "text": "T"
+              }
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "deepCopy",
+          "declaration": {
+            "name": "deepCopy",
+            "module": "src/utils/index.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "test/mocks/style-mock.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "",
+            "module": "test/mocks/style-mock.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "test/mocks/svg-mock.ts",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "",
+            "module": "test/mocks/svg-mock.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-esm/src/engine/RubiksCube.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "RubiksCube"
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "RubiksCube",
+          "declaration": {
+            "name": "RubiksCube",
+            "module": "lib-esm/src/engine/RubiksCube.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-esm/src/engine/RubiksCubeEngine.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "RubiksCubeEngine",
+          "members": [
+            {
+              "kind": "field",
+              "name": "cube"
+            },
+            {
+              "kind": "method",
+              "name": "createCube"
+            },
+            {
+              "kind": "method",
+              "name": "restart"
+            },
+            {
+              "kind": "field",
+              "name": "isGameOver",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "true"
+            },
+            {
+              "kind": "field",
+              "name": "onWinCallback",
+              "default": "onWinCallback"
+            },
+            {
+              "kind": "field",
+              "name": "onLoseCallback",
+              "default": "onLoseCallback"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "RubiksCubeEngine",
+          "declaration": {
+            "name": "RubiksCubeEngine",
+            "module": "lib-esm/src/engine/RubiksCubeEngine.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-esm/src/engine/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./RubiksCube.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "*",
+          "declaration": {
+            "name": "*",
+            "package": "./RubiksCubeEngine.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-esm/src/utils/index.js",
+      "declarations": [
+        {
+          "kind": "function",
+          "name": "deepCopy",
+          "parameters": [
+            {
+              "name": "object"
+            }
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "deepCopy",
+          "declaration": {
+            "name": "deepCopy",
+            "module": "lib-esm/src/utils/index.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-esm/src/events/game-lost-event.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "GameLostEvent",
+          "superclass": {
+            "name": "RubiksCubeEvent",
+            "module": "/lib-esm/src/events/rubiks-cube-event.js"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "GameLostEvent",
+          "declaration": {
+            "name": "GameLostEvent",
+            "module": "lib-esm/src/events/game-lost-event.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-esm/src/events/game-won-event.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "GameWonEvent",
+          "superclass": {
+            "name": "RubiksCubeEvent",
+            "module": "/lib-esm/src/events/rubiks-cube-event.js"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "GameWonEvent",
+          "declaration": {
+            "name": "GameWonEvent",
+            "module": "lib-esm/src/events/game-won-event.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-esm/src/events/index.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "GameLostEvent",
+          "declaration": {
+            "name": "GameLostEvent",
+            "module": "./game-lost-event.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "GameWonEvent",
+          "declaration": {
+            "name": "GameWonEvent",
+            "module": "./game-won-event.js"
+          }
+        },
+        {
+          "kind": "js",
+          "name": "RubiksCubeEvent",
+          "declaration": {
+            "name": "RubiksCubeEvent",
+            "module": "./rubiks-cube-event.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-esm/src/events/rubiks-cube-event.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "RubiksCubeEvent",
+          "superclass": {
+            "name": "CustomEvent",
+            "module": "lib-esm/src/events/rubiks-cube-event.js"
+          }
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "RubiksCubeEvent",
+          "declaration": {
+            "name": "RubiksCubeEvent",
+            "module": "lib-esm/src/events/rubiks-cube-event.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-esm/test/mocks/style-mock.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "",
+            "module": "lib-esm/test/mocks/style-mock.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-esm/test/mocks/svg-mock.js",
+      "declarations": [],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "default",
+          "declaration": {
+            "name": "",
+            "module": "lib-esm/test/mocks/svg-mock.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-cjs/src/engine/RubiksCube.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-cjs/src/engine/RubiksCubeEngine.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-cjs/src/engine/index.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-cjs/src/utils/index.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-cjs/src/events/game-lost-event.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-cjs/src/events/game-won-event.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-cjs/src/events/index.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-cjs/src/events/rubiks-cube-event.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-cjs/test/mocks/style-mock.js",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "lib-cjs/test/mocks/svg-mock.js",
+      "declarations": [],
+      "exports": []
+    }
+  ]
+}
