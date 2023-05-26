@@ -1,1 +1,1 @@
-{"version":3,"file":"RubiksCube.js","sourceRoot":"","sources":["../../../src/engine/RubiksCube.ts"],"names":[],"mappings":"AAAA,MAAM,OAAO,UAAU;IACrB,gBAAe,CAAC;CACjB","sourcesContent":["export class RubiksCube {\n  constructor() {}\n}\n"]}
+{"version":3,"file":"RubiksCube.js","sourceRoot":"","sources":["../../../src/engine/RubiksCube.ts"],"names":[],"mappings":"AAAA,MAAM,OAAO,UAAU;CAAG","sourcesContent":["export class RubiksCube {}\n"]}

@@ -57,7 +57,7 @@ export class RubiksCubeGame extends LitElement {
         if (!((_a = this.engine) === null || _a === void 0 ? void 0 : _a.cube)) {
             return html `No Cube :(`;
         }
-        return html ` <div class="cube-container">Cube</div> `;
+        return html `<div class="cube-container">Cube</div>`;
     }
 }
 __decorate([

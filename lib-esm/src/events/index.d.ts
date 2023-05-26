@@ -1,4 +1,4 @@
-export { GameLostEvent } from './game-lost-event';
-export { GameWonEvent } from './game-won-event';
-export { RubiksCubeEvent } from './rubiks-cube-event';
+export { GameLostEvent } from './game-lost-event.js';
+export { GameWonEvent } from './game-won-event.js';
+export { RubiksCubeEvent } from './rubiks-cube-event.js';
 //# sourceMappingURL=index.d.ts.map

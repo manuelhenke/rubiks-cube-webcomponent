@@ -1,4 +1,4 @@
-import { RubiksCube } from './RubiksCube';
+import { RubiksCube } from './RubiksCube.js';
 export declare class RubiksCubeEngine {
     #private;
     isGameOver: boolean;

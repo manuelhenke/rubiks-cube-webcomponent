@@ -1,5 +1,5 @@
-import { RubiksCube } from '@/engine';
-import { RubiksCubeEvent } from './rubiks-cube-event';
+import { RubiksCube } from '../engine/index.js';
+import { RubiksCubeEvent } from './rubiks-cube-event.js';
 export declare class GameWonEvent extends RubiksCubeEvent {
     constructor(cube: RubiksCube);
 }

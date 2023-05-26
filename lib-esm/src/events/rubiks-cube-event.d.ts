@@ -1,4 +1,4 @@
-import { RubiksCube } from '@/engine';
+import { RubiksCube } from '../engine/index.js';
 interface RubiksCubeEventDetail {
     cube: RubiksCube;
 }

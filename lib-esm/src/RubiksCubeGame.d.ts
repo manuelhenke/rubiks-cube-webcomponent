@@ -1,5 +1,5 @@
 import { LitElement } from 'lit';
-import { GameWonEvent, GameLostEvent } from '@/events';
+import { GameWonEvent, GameLostEvent } from './events/index.js';
 /**
  * @fires {GameWonEvent} rubiksCube:game-won - User just won the game
  * @fires {GameLostEvent} rubiksCube:game-lost - User just lost the game

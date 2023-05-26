@@ -1,4 +1,4 @@
-import { RubiksCubeGame } from './RubiksCubeGame';
+import { RubiksCubeGame } from './RubiksCubeGame.js';
 declare const CUSTOM_ELEMENT_TAG = "rubiks-cube-game";
 declare global {
     interface HTMLElementTagNameMap {
