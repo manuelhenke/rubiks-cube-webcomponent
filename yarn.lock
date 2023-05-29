@@ -218,10 +218,10 @@
   resolved "https://registry.yarnpkg.com/@csstools/selector-specificity/-/selector-specificity-2.2.0.tgz#2cbcf822bf3764c9658c4d2e568bd0c0cb748016"
   integrity sha512-+OJ9konv95ClSTOJCmMZqpd5+YGsB2S+x6w3E1oaM8UuR5j8nTNHYSz8c9BEPGDOCMQYIEEGlVPj/VY64iTbGw==
 
-"@custom-elements-manifest/analyzer@^0.6.3":
-  version "0.6.9"
-  resolved "https://registry.yarnpkg.com/@custom-elements-manifest/analyzer/-/analyzer-0.6.9.tgz#556224d182334a57bc7040ea84760af803101950"
-  integrity sha512-N6GQtDYf9yiFpf0fpjwQ7rtKlBbt9CDqXGenfrMQlo7RfC5HJVH9ZkrKsNBETiV01WPdvUBJRgag+Tbafb+jXA==
+"@custom-elements-manifest/analyzer@^0.8.3":
+  version "0.8.3"
+  resolved "https://registry.yarnpkg.com/@custom-elements-manifest/analyzer/-/analyzer-0.8.3.tgz#ac60acf4b3c4fffca90d7b7908c0826e5bb725fa"
+  integrity sha512-wT+t4JNVMj56bSCNxxjkDSKx2KJ6bzXQMjinXJe/2+9J7Abaw/9a4+EWYLWQ//KBXRvyNhWrkolFL6ICc/VATg==
   dependencies:
     "@custom-elements-manifest/find-dependencies" "^0.0.5"
     "@github/catalyst" "^1.6.0"
